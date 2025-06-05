@@ -1,5 +1,41 @@
+import java.util.Scanner;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
+    public static void main(String[] args)
+    {
+
+        // venta a por mayor
+        // menos de 5 paquetes NO VENDE
+        // entre 5 a 15 paquetes envio 10usd
+        // mas de 15 envio gratis
+
+        int cantidadPaquetes;
+        double precioPaquetes = 100.0;
+        double valoraPagar, costoEnvio;
+        double descuentoPaquete = 0.05;
+
+        Scanner ingresapaquetes = new Scanner(System.in);
+
+        System.out.println("Ingrese cantidad de paquetes a comprar: ");
+        cantidadPaquetes = ingresapaquetes.nextInt();
+
+        if (cantidadPaquetes < 5)
+        {
+            System.out.println("No se realizan ventas por menos de 5 paquetes");
+        } else
+          {
+            if (cantidadPaquetes >= 5 && cantidadPaquetes <= 15)
+            {
+                System.out.println("El envio tiene un costo de 10 usd");
+                costoEnvio = 10;
+            }
+            else
+            {
+            System.out.println("El envio no tiene costo");
+            costoEnvio = 0;
+            }
+              valoraPagar = (precioPaquetes*cantidadPaquetes) + costoEnvio;
+              System.out.println("Ud debe pagar " + valoraPagar + " Usd.");
+          }
+        }
     }
-}
