@@ -34,8 +34,12 @@ public class Main {
             System.out.println("El envio no tiene costo");
             costoEnvio = 0;
             }
-              valoraPagar = (precioPaquetes*cantidadPaquetes) + costoEnvio;
-              System.out.println("Ud debe pagar " + valoraPagar + " Usd.");
+            double subtotal =  precioPaquetes*cantidadPaquetes;
+            valoraPagar = subtotal + costoEnvio;
+              System.out.println("Resumen de su compra: " + System.lineSeparator() +
+                      "Subtotal a pagar: " + subtotal + " Usd" +  System.lineSeparator() +
+                      "Costo de envio: " + costoEnvio + " Usd"+ System.lineSeparator() +
+                      "Total a pagar: " + valoraPagar + " Usd");
           }
         }
     }
