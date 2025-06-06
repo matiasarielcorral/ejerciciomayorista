@@ -11,7 +11,7 @@ public class Main {
 
         int cantidadPaquetes;
         double precioPaquetes = 100.0;
-        double valoraPagar, costoEnvio;
+        double valorTotal, costoEnvio, subtotal;
         double descuentoPaquete = 0.05;
         Scanner ingresapaquetes = new Scanner(System.in);
 
@@ -46,12 +46,12 @@ public class Main {
             System.out.println("El envio no tiene costo");
             costoEnvio = 0;
             }
-            double subtotal =  precioPaquetes*cantidadPaquetes;
-            valoraPagar = subtotal + costoEnvio;
+            subtotal =  precioPaquetes*cantidadPaquetes;
+            valorTotal = subtotal + costoEnvio;
               System.out.println("Resumen de su compra: " + System.lineSeparator() +
                       "Subtotal a pagar: " + subtotal + " Usd" +  System.lineSeparator() +
                       "Costo de envio: " + costoEnvio + " Usd"+ System.lineSeparator() +
-                      "Total a pagar: " + valoraPagar + " Usd");
+                      "Total a pagar: " + valorTotal + " Usd");
           }
         }
     }
